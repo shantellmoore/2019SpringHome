@@ -1,23 +1,23 @@
 {
-    "name": "2019springinclass",
-    "version": "1.0.0",
-    "description": "2019springinclass",
-    "main": "index.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "nodemon server/index.js --watch server"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/shantellmoore/2019SpringInClass.git"
-    },
-    "license": "ISC",
-    "dependencies": {
-      "express": "^4.16.4",
-      "mysql": "^2.16.0",
-      "dotenv": "^6.2.0"
-    },
-    "devDependencies": {
-      "nodemon": "^1.18.10"
-    }
+  "name": "2019springinclass",
+  "version": "1.0.0",
+  "description": "2019springinclass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/index.js --watch server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shantellmoore/2019SpringInClass.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mysql": "^2.16.0",
+    "dotenv": "^6.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
   }
+}
