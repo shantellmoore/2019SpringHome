@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1> Register </h1>
+        <h1> Login </h1>
 
         <input 
             type="Email" 
@@ -15,7 +15,7 @@
             placeholder="Password"/>
         <br>
         <button
-            @click="register"> Register </button>
+            @click="login"> Login </button>
 
     </div>
 </template>
@@ -29,7 +29,7 @@ export default {
     },
     methods:{
 register(){
-    //console.log('register button was clicked', this.email, this.password)
+   // console.log('register button was clicked', this.email, this.password)
 }
     },
    

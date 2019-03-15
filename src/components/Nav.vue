@@ -1,0 +1,37 @@
+<template>
+          <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+            <router-link class="navbar-brand" to="/">
+                <img alt="Vue logo" src="../assets/logo.png" height="50"></router-link>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <router-link class="nav-link" to="/" active-class="active" exact>Home <span class="sr-only">(current)</span></router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" to="/about" active-class="active">About</router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" to="/register" active-class="active">Register</router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" to="/login" active-class="active">Login</router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link class="nav-link disabled" href="#">Disabled</router-link>
+                </li>
+                </ul>
+            </div>
+        </nav>
+</template>
+<script>
+export default {
+
+}
+</script>
+
+<style>
+
+</style>
