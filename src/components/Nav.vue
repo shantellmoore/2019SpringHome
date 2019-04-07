@@ -1,5 +1,5 @@
 <template>
-          <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
             <router-link class="navbar-brand" to="/">
                 <img alt="Vue logo" src="../assets/logo.png" height="50"></router-link>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
