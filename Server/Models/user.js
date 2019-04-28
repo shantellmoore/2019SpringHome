@@ -1,16 +1,26 @@
 const conn = require('./mysql_connection');
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const axios = require('axios');
 
 const SALT_ROUNDS = 8;
+const JWT_SECRET = process.env.JWT_SECRET || 'some long string..';
 
 const model = {
     async getAll(){
         return await conn.query("SELECT * FROM 2019Spring_Persons");   
     },
     async get(id){
-        return await conn.query("SELECT * FROM 2019Spring_Persons WHERE Id=?", id);    
+        const data = await conn.query("SELECT * FROM 2019Spring_Persons WHERE Id=?", id);
+        if(!data){
+            throw Error("User not found");
+        }
+        return data[0];
     },
     async add(input){
+        if(!input.Password){
+            throw Error('Password is Required');
+        }
         if(input.Password.length < 8){
             throw Error('A longer Password is Required');
         }
@@ -21,6 +31,9 @@ const model = {
         );
         return await model.get(data.insertId);
     },
+    getFromToken(token){
+        return jwt.verify(token, JWT_SECRET);
+    },
     async login(email, password){
         const data = await conn.query(`SELECT * FROM 2019Spring_Persons P
                         Join 2019Spring_ContactMethods CM On CM.Person_Id = P.id
@@ -30,7 +43,8 @@ const model = {
         }
         const x = await bcrypt.compare(password, data[0].Password);
         if(x){
-            return data[0];
+            const user = { ...data[0], Password: null };
+            return { user, token: jwt.sign(user, JWT_SECRET) };
         }else{
             throw Error('Wrong Password');
         }

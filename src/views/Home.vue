@@ -2,7 +2,7 @@
   <div class="home">
     <div class="jumbotron">
     <img alt="Vue logo" src="../assets/logo.png">
-    <h2> Welcome to Vegan Fitness App </h2>
+    <h2> Welcome to Fitness App </h2>
     </div>
   </div>
 </template>

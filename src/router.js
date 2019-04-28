@@ -3,10 +3,13 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Register from './views/Register.vue'
 import Login from './views/Login.vue'
+import MyFriends from './views/MyFriends'
+import { Globals } from "@/models/api.js";
+
 
 Vue.use(Router)
 
-export default new Router({
+const router= new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
@@ -26,6 +29,11 @@ export default new Router({
       component: Register
     },
     {
+      path: '/MyFriends',
+      name: 'myfriends',
+      component: MyFriends
+    },
+    {
       path: '/about',
       name: 'about',
 
@@ -37,3 +45,13 @@ export default new Router({
     }
   ]
 })
+router.beforeEach((to, from, next) => {
+  const publicRoutes = ['home', 'login', 'register'];
+  if(!publicRoutes.includes(to.name) && !Globals.user){
+    Globals.redirectRoute ={ name: to.name, path: to.path, params: to.params, query: to.query, hash: to.hash }
+    return next('login');
+  }
+  next();
+})
+
+export default router;
