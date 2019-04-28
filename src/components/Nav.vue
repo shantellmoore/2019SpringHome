@@ -11,7 +11,7 @@
                     <router-link class="nav-link" to="/" active-class="active" exact>Home <span class="sr-only">(current)</span></router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link class="nav-link" to="/about" active-class="active">About</router-link>
+                    <router-link class="nav-link" to="/aboutyou" active-class="active">About You</router-link>
                 </li>
                 <li class="nav-item">
                     <router-link class="nav-link" to="/register" active-class="active">Register</router-link>

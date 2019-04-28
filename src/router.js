@@ -34,8 +34,8 @@ const router= new Router({
       component: MyFriends
     },
     {
-      path: '/about',
-      name: 'about',
+      path: '/aboutyou',
+      name: 'aboutyou',
 
 
       // route level code-splitting
