@@ -14,25 +14,28 @@
                     <router-link class="nav-link" to="/aboutyou" active-class="active">About You</router-link>
                 </li>
                 <li class="nav-item">
+                    <router-link class="nav-link" to="/Myfriends" active-class="active">My Friends</router-link>
+                </li>
+                <li class="nav-item">
                     <router-link class="nav-link" to="/register" active-class="active">Register</router-link>
                 </li>
                 <li class="nav-item">
                     <router-link class="nav-link" to="/login" active-class="active">Login</router-link>
                 </li>
+            
+
                 <li class="nav-item">
-                    <router-link class="nav-link" to="/Myfriends" active-class="active">My Friends</router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link class="nav-link disabled" href="#">Disabled</router-link>
+                    <router-link class="nav-link disabled" to="#" href="#">Disabled</router-link>
                 </li>
                 </ul>
                 <form class="form-inline mt-2 mt-md-0" v-if="!Globals.user">
-                    <router-link to="/Login" class="nav-link" @click,prevent="login">Login</router-link>
+                    <router-link to="/Login" class="nav-link" @click.prevent="login">Login</router-link>
                     <router-link to="/Register" class="nav-link">Sign up</router-link>
 
                 </form>
-            </div>
+                 </div>
         </nav>
+
 </template>
 <script>
 import { Globals } from "@/models/api";
