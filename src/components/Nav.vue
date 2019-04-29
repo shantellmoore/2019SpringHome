@@ -22,11 +22,12 @@
                 <li class="nav-item">
                     <router-link class="nav-link" to="/login" active-class="active">Login</router-link>
                 </li>
-            
+        
 
-                <li class="nav-item">
+
+                <!--<li class="nav-item">
                     <router-link class="nav-link disabled" to="#" href="#">Disabled</router-link>
-                </li>
+                </li> -->
                 </ul>
                 <form class="form-inline mt-2 mt-md-0" v-if="!Globals.user">
                     <router-link to="/Login" class="nav-link" @click.prevent="login">Login</router-link>
