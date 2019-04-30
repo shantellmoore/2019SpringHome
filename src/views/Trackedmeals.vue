@@ -59,57 +59,60 @@
         </div>
       </div>
       
-  <div class="row">
-    <div class="col">
-      <h1>This is {{name}}'s page. She is {{age}} years old</h1>
-      <input v-model="age" type="text" class="form-control" placeholder="Age"/>
-      <div class="progress">
-       <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" :style="{width: age + '%'}"></div>
-      </div>
-    </div>
-  </div>
 
-      <h2>Tracked Meals</h2>
+      <h2 style="text-align:center;">Tracked Meals for the Week</h2>
       <div class="table-responsive">
         <table class="table table-striped table-sm">
           <thead>
             <tr>
               <th>Date</th>
-              <th>Activity</th>
-              <th>Activity Duration</th>
-              <th>Calories Burned</th>
+              <th>Breakfast</th>
+              <th>Lunch</th>
+              <th>Dinner</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>{{Dates}}</td>
-              <td>{{Activity}}</td>
-              <td>{{Duration}}</td>
-              <td>{{Calories}}</td>
+              <td><input v-model="Dates1" type="text" class="form-control" placeholder="Date"/></td>
+              <td><input v-model="Breakfast1" type="text" class="form-control" placeholder="Breakfast"/></td>
+              <td><input v-model="Lunch1" type="text" class="form-control" placeholder="Lunch"/></td>
+              <td><input v-model="Dinner1" type="text" class="form-control" placeholder="Dinner"/></td>
+            </tr>
+             <tr>
+              <td><input v-model="Dates2" type="text" class="form-control" placeholder="Date"/></td>
+              <td><input v-model="Breakfast2" type="text" class="form-control" placeholder="Breakfast"/></td>
+              <td><input v-model="Lunch2" type="text" class="form-control" placeholder="Lunch"/></td>
+              <td><input v-model="Dinner2" type="text" class="form-control" placeholder="Dinner"/></td>
+            </tr>
+             <tr>
+            <td><input v-model="Dates3" type="text" class="form-control" placeholder="Date"/></td>
+              <td><input v-model="Breakfast3" type="text" class="form-control" placeholder="Breakfast"/></td>
+              <td><input v-model="Lunch3" type="text" class="form-control" placeholder="Lunch"/></td>
+              <td><input v-model="Dinner3" type="text" class="form-control" placeholder="Dinner"/></td>
+            </tr>
+             <tr>
+            <td><input v-model="Dates4" type="text" class="form-control" placeholder="Date"/></td>
+              <td><input v-model="Breakfast4" type="text" class="form-control" placeholder="Breakfast"/></td>
+              <td><input v-model="Lunch4" type="text" class="form-control" placeholder="Lunch"/></td>
+              <td><input v-model="Dinner4" type="text" class="form-control" placeholder="Dinner"/></td>
             </tr>
             <tr>
-              <td>1-2-19</td>
-              <td>Soccer</td>
-              <td>43mins</td>
-              <td>425</td>
+            <td><input v-model="Dates5" type="text" class="form-control" placeholder="Date"/></td>
+              <td><input v-model="Breakfast5" type="text" class="form-control" placeholder="Breakfast"/></td>
+              <td><input v-model="Lunch5" type="text" class="form-control" placeholder="Lunch"/></td>
+              <td><input v-model="Dinner5" type="text" class="form-control" placeholder="Dinner"/></td>
             </tr>
             <tr>
-              <td>1-3-19</td>
-              <td>Swimming</td>
-              <td>30mins</td>
-              <td>276</td>
+            <td><input v-model="Dates6" type="text" class="form-control" placeholder="Date"/></td>
+              <td><input v-model="Breakfast6" type="text" class="form-control" placeholder="Breakfast"/></td>
+              <td><input v-model="Lunch6" type="text" class="form-control" placeholder="Lunch"/></td>
+              <td><input v-model="Dinner6" type="text" class="form-control" placeholder="Dinner"/></td>
             </tr>
             <tr>
-              <td>1-5-19</td>
-              <td>Running</td>
-              <td>37mins</td>
-              <td>363</td>
-            </tr>
-            <tr>
-             <td>1-11-19</td>
-              <td>Hiking</td>
-              <td>62mins</td>
-              <td>687</td>
+            <td><input v-model="Dates7" type="text" class="form-control" placeholder="Date"/></td>
+              <td><input v-model="Breakfast7" type="text" class="form-control" placeholder="Breakfast"/></td>
+              <td><input v-model="Lunch7" type="text" class="form-control" placeholder="Lunch"/></td>
+              <td><input v-model="Dinner7" type="text" class="form-control" placeholder="Dinner"/></td>
             </tr>
           </tbody>
         </table>
@@ -129,10 +132,10 @@ export default {
         friends: [],
         name: "Shantell",
         age: "23",
-        Dates: "1-1-19",
-        Activity: "Running",
-        Duration: "20min",
-        Calories: "400"
+       // Dates: "1-1-19",
+       // Activity: "Running",
+       // Duration: "20min",
+       //Calories: "400"
 
 
 

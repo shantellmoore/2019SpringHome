@@ -57,57 +57,59 @@
         </div>
       </div>
       
-  <div class="row">
-    <div class="col">
-      <h1>This is {{name}}'s page. She is {{age}} years old</h1>
-      <input v-model="age" type="text" class="form-control" placeholder="Age"/>
-      <div class="progress">
-       <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" :style="{width: age + '%'}"></div>
-      </div>
-    </div>
-  </div>
-
-      <h2>Workouts</h2>
+      <h2 style="text-align:center;">Workouts for the Week</h2>
       <div class="table-responsive">
         <table class="table table-striped table-sm">
           <thead>
             <tr>
               <th>Date</th>
               <th>Activity</th>
-              <th>Activity Duration</th>
-              <th>Calories Burned</th>
+              <th>Duration</th>
+              <th>Calories</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>1-1-19</td>
-              <td>Running</td>
-              <td>45mins</td>
-              <td>400</td>
+              <td><input v-model="Dates1" type="text" class="form-control" placeholder="Date"/></td>
+              <td><input v-model="Activity1" type="text" class="form-control" placeholder="Activity"/></td>
+              <td><input v-model="Duration1" type="text" class="form-control" placeholder="Duration"/></td>
+              <td><input v-model="Calories1" type="text" class="form-control" placeholder="Calories"/></td>
+            </tr>
+             <tr>
+              <td><input v-model="Dates2" type="text" class="form-control" placeholder="Date"/></td>
+              <td><input v-model="Activity2" type="text" class="form-control" placeholder="Activity"/></td>
+              <td><input v-model="Duration2" type="text" class="form-control" placeholder="Duration"/></td>
+              <td><input v-model="Calories2" type="text" class="form-control" placeholder="Calories"/></td>
+            </tr>
+             <tr>
+            <td><input v-model="Dates3" type="text" class="form-control" placeholder="Date"/></td>
+              <td><input v-model="Activity3" type="text" class="form-control" placeholder="Activity"/></td>
+              <td><input v-model="Duration3" type="text" class="form-control" placeholder="Duration"/></td>
+              <td><input v-model="Calories3" type="text" class="form-control" placeholder="Calories"/></td>
+            </tr>
+             <tr>
+            <td><input v-model="Dates4" type="text" class="form-control" placeholder="Date"/></td>
+              <td><input v-model="Activity4" type="text" class="form-control" placeholder="Activity"/></td>
+              <td><input v-model="Duration4" type="text" class="form-control" placeholder="Duration"/></td>
+              <td><input v-model="Calories4" type="text" class="form-control" placeholder="Calories"/></td>
             </tr>
             <tr>
-              <td>1-2-19</td>
-              <td>Soccer</td>
-              <td>43mins</td>
-              <td>425</td>
+            <td><input v-model="Dates5" type="text" class="form-control" placeholder="Date"/></td>
+              <td><input v-model="Activity5" type="text" class="form-control" placeholder="Activity"/></td>
+              <td><input v-model="Duration5" type="text" class="form-control" placeholder="Duration"/></td>
+              <td><input v-model="Calories5" type="text" class="form-control" placeholder="Calories"/></td>
             </tr>
             <tr>
-              <td>1-3-19</td>
-              <td>Swimming</td>
-              <td>30mins</td>
-              <td>276</td>
+            <td><input v-model="Dates6" type="text" class="form-control" placeholder="Date"/></td>
+              <td><input v-model="Activity6" type="text" class="form-control" placeholder="Activity"/></td>
+              <td><input v-model="Duration6" type="text" class="form-control" placeholder="Duration"/></td>
+              <td><input v-model="Calories6" type="text" class="form-control" placeholder="Calories"/></td>
             </tr>
             <tr>
-              <td>1-5-19</td>
-              <td>Running</td>
-              <td>37mins</td>
-              <td>363</td>
-            </tr>
-            <tr>
-             <td>1-11-19</td>
-              <td>Hiking</td>
-              <td>62mins</td>
-              <td>687</td>
+            <td><input v-model="Dates7" type="text" class="form-control" placeholder="Date"/></td>
+              <td><input v-model="Activity7" type="text" class="form-control" placeholder="Activity"/></td>
+              <td><input v-model="Duration7" type="text" class="form-control" placeholder="Duration"/></td>
+              <td><input v-model="Calories7" type="text" class="form-control" placeholder="Calories"/></td>
             </tr>
           </tbody>
         </table>

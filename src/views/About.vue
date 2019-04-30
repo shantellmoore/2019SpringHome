@@ -82,52 +82,59 @@ export default {
           </div>
         </div>
       </div>
-      <canvas class="my-4 w-100 chartjs-render-monitor" id="myChart" width="1106" height="466" style="display: block; height: 233px; width: 553px;"></canvas>
+
+
       <h2>Overall Fitness</h2>
-      <div class="table-responsive">
-        <table class="table table-striped table-sm">
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Activity</th>
-              <th>Activity Duration</th>
-              <th>Calories Burned</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1-1-19</td>
-              <td>Running</td>
-              <td>45mins</td>
-              <td>400</td>
-            </tr>
-            <tr>
-              <td>1-2-19</td>
-              <td>Soccer</td>
-              <td>43mins</td>
-              <td>425</td>
-            </tr>
-            <tr>
-              <td>1-3-19</td>
-              <td>Swimming</td>
-              <td>30mins</td>
-              <td>276</td>
-            </tr>
-            <tr>
-              <td>1-5-19</td>
-              <td>Running</td>
-              <td>37mins</td>
-              <td>363</td>
-            </tr>
-            <tr>
-             <td>1-11-19</td>
-              <td>Hiking</td>
-              <td>62mins</td>
-              <td>687</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="card-deck mb-3 text-center">
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Tracked Meals</h4>
       </div>
+      <div class="card-body">
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>View your weeks meals</li>
+          <li>Click the link below</li>
+        </ul>
+        <router-link to="/trackedmeals" type="button" class="btn btn-lg btn-block btn-primary">Meals</router-link>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Workouts</h4>
+      </div>
+      <div class="card-body">
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>View your weeks workouts</li>
+          <li>Click the link below</li>
+        </ul>
+        <router-link to="/workouts" type="button" class="btn btn-lg btn-block btn-primary">Workouts</router-link>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Goals</h4>
+      </div>
+      <div class="card-body">
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>View your weeks goals</li>
+          <li>Click the link below</li>
+        </ul>
+        <router-link to="/goals" type="button" class="btn btn-lg btn-block btn-primary">Goals</router-link>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Sleep</h4>
+      </div>
+      <div class="card-body">
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>View your weeks sleep</li>
+          <li>Click the link below</li>
+        </ul>
+        <router-link to="/sleep" type="button" class="btn btn-lg btn-block btn-primary">Sleep</router-link>
+      </div>
+    </div>
+  </div>
     </main>
   </div>
 

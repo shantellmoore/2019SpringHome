@@ -1,3 +1,4 @@
+
 <template>
     <div class="row">
     <nav class="col-12 col-md-3 col-xl-2 bg-light sidebar" id="sidebar-wrapper">
@@ -11,10 +12,10 @@
           </li>
           <br>
           <li class="nav-item">
-            <a class="nav-link active" href="#">
+            <router-link class="nav-link" to="/trackedmeals" active-class="active" exact>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6" y2="6"></line><line x1="6" y1="18" x2="6" y2="18"></line></svg>
               Tracked Meals <span class="sr-only">(current)</span>
-            </a>
+            </router-link>
           </li>
           <br>
           <li class="nav-item">
@@ -59,11 +60,17 @@
       
   <div class="row">
     <div class="col">
-      <h1 style="text-align:center;">{{name}}'s Sleeping Patterns</h1>
-      <input v-model="age" type="text" class="form-control" placeholder="Age"/>
+        <h1 style="text-align:center;">{{name}}'s Sleeping Patterns</h1>
+        <div class="row">
+    <div class="col">
+      <h1>{{hours}} hours slept this week</h1>
+      <input v-model="hours" type="text" class="form-control" placeholder="Hours"/>
       <div class="progress">
-       <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" :style="{width: age + '%'}"></div>
+       <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" :style="{width: hours + '%'}"></div>
       </div>
+    </div>
+  </div>
+        
     </div>
   </div>
 
@@ -78,16 +85,20 @@ import {Globals} from "@/models/api";
 import { GetFriends } from "@/models/users.js";
 
 export default {
+    
     data: () => ({
         Globals: Globals,
         friends: [],
         name: "Shantell",
-        age: "23"
+        age: "23",
+        hours:""
+        
 
 
     }),
     async mounted(){
         this.friends = await GetFriends();
+        
     }}
 
 </script>
