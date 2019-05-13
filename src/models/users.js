@@ -1,5 +1,6 @@
 
 import { api, Globals } from "./api";
+//import { async } from "q";
 
 export async function GetFriends(){
     const x = await api("users")
@@ -17,6 +18,12 @@ export async function Login(data){
     Globals.token= x.token;
     return x;
 }
+
+export async function GetWorkouts(){
+    const x = await api("users")
+    return x;
+}  
+
 //export async function oAuthLogin(token, fbid){
 //    const x = await api("users/facebookLogin", {token, fbid})
 //    Globals.user= x.user;

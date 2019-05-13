@@ -1,5 +1,4 @@
 
-
 <!--<template>
   <div class="row">
     <div class="col">
@@ -83,6 +82,15 @@ export default {
         </div>
       </div>
 
+        <div class="form-group">
+        <label for="Workout">Workouts</label>
+        <input type="workout" 
+        <v-select :options="['Hiking', 'Jogging','Running','Swimming', 'Skiing', 'Snowboarding']" 
+        class="form-control" name= "workouts" label= "Workouts" id= "Workouts" placeholder="Select Workouts"></v-select>
+        </div>
+        <br>
+        <br>
+      
 
       <h2>Overall Fitness</h2>
       <div class="card-deck mb-3 text-center">
@@ -143,15 +151,25 @@ export default {
 
 import {Globals} from "@/models/api";
 import { GetFriends } from "@/models/users.js";
+import { GetWorkouts } from "@/models/users.js";
+import Vue from 'vue';
+import vSelect from 'vue-select';
+import 'vue-select/dist/vue-select.css';
+
+Vue.component('v-select', vSelect)
+
 export default {
     data: () => ({
         Globals: Globals,
         friends: [],
         name: "Shantell",
-        age: "23"
+        age: "23",
+        workouts: []
+       
     }),
     async mounted(){
         this.friends = await GetFriends();
+        this.workouts = await GetWorkouts
     }
 }
 </script>
