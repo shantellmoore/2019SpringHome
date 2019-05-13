@@ -169,7 +169,7 @@ export default {
     }),
     async mounted(){
         this.friends = await GetFriends();
-        this.workouts = await GetWorkouts
+        this.workouts = await GetWorkouts();
     }
 }
 </script>
